@@ -21,15 +21,19 @@ class SerialGenerator:
     """
 
     def __init__(self, start=0):
+        ""Makes a new generator, starting at start or 0""
         self.start = self.next = start
 
     def __repr__(self):
+        ""Shows""
         return f"<SerialGenerator start={self.start} next={self.next}>"
 
     def generate(self):
+        ""Return next serial number""
         self.next += 1
         return self.next -1
 
-    def reset(self):s
+    def reset(self):
+        ""Reset to start""
         self.next = self.start
 
